@@ -4,6 +4,9 @@ A simple yet structured **React-based Food Delivery Application** built to demon
 
 This project was created as an academic submission to showcase practical understanding of **modern React development**.
 
+<img width="1616" height="1312" alt="image" src="https://github.com/user-attachments/assets/874d8cda-5676-4393-8ecb-4be5aeb96df2" />
+
+
 ---
 
 ## 📌 Project Objective
