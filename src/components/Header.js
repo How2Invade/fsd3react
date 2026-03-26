@@ -3,14 +3,23 @@ import { Link } from "react-router-dom";
 
 function Header() {
   const cartItems = useSelector((state) => state.cart.items);
+  const totalItems = cartItems.reduce((sum, item) => sum + (item.quantity || 1), 0);
 
   return (
-    <div style={{ background: "#ff4d4d", color: "white", padding: "15px" }}>
-      <h2>Food Delivery</h2>
+    <header className="site-header">
+      <div className="site-header__inner">
+        <h1 className="site-title">Food Delivery</h1>
 
-      <Link to="/">Home</Link> | 
-      <Link to="/cart"> Cart ({cartItems.length})</Link>
-    </div>
+        <nav className="site-nav">
+          <Link to="/" className="site-nav__link">
+            Home
+          </Link>
+          <Link to="/cart" className="site-nav__link site-nav__link--cart">
+            Cart ({totalItems})
+          </Link>
+        </nav>
+      </div>
+    </header>
   );
 }
 

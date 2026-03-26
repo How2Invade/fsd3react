@@ -2,13 +2,17 @@ import FoodItem from "./FoodItem";
 
 function FoodList({ foods }) {
   return (
-    <div>
-      <h2>Menu</h2>
+    <main className="page page--menu">
+      <section className="menu-section">
+        <h2 className="section-title">Today&apos;s Menu</h2>
 
-      {foods.map((food) => (
-        <FoodItem key={food.id} food={food} />
-      ))}
-    </div>
+        <div className="food-grid">
+          {foods.map((food) => (
+            <FoodItem key={food.id} food={food} />
+          ))}
+        </div>
+      </section>
+    </main>
   );
 }
 

@@ -5,14 +5,17 @@ function FoodItem({ food }) {
   const dispatch = useDispatch();
 
   return (
-    <div style={{ border: "1px solid gray", margin: "10px", padding: "10px" }}>
-      <h3>{food.name}</h3>
-      <p>₹{food.price}</p>
+    <article className="food-card">
+      <h3 className="food-card__title">{food.name}</h3>
+      <p className="food-card__price">₹{food.price}</p>
 
-      <button onClick={() => dispatch(addItem(food))}>
+      <button
+        className="button button--primary"
+        onClick={() => dispatch(addItem(food))}
+      >
         Add to Cart
       </button>
-    </div>
+    </article>
   );
 }
 
